@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>HBP Validation Framework</title>
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="live_paper.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+        .tabs .tab a{
+            color:#000;
+            background-color:#ffe082;
+        } /*Black color to the text and background color specified*/
+
+        .tabs .tab a:hover {
+            background-color:#ffc107;
+            color:#000;
+        } /*Text color on hover*/
+
+        .tabs .tab a.active {
+            background-color:##ff9800;
+            color:#000;
+        } /*Background and text color when a tab is active*/
+
+        .tabs .indicator {
+            background-color:#000;
+        } /*Color of underline*/
+
+        td:first-child {
+            font-weight: bold;
+        }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="ellipsis.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#html_table_result_summary').DataTable( {
+                    "order": [[ 0, "asc" ]],
+                    "searching": false,
+                    "lengthChange": false,
+                    "paging": false,
+                    "info": false,
+                    columnDefs: [ {
+                    targets: 1,
+                    render: $.fn.dataTable.render.ellipsis( 10 )
+                    } , {
+                    targets: [2, 3],
+                    render: $.fn.dataTable.render.ellipsis( 20 )
+                    } ]
+                } );
+            } );
+        </script>
+    </head>
+
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="" name="link_pagetop" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    HBP Validation Framework Report
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">HBP_VF_Report_20191203-154822</h5>
+        </div>
+
+        <div>
+            <p><strong>Report Name: </strong> HBP_VF_Report_20191203-154822.html </p>
+            <p><strong>Created Date: </strong> 2019-12-03 15:48:22 </p>
+            <br />
+            <p><strong>Contains info for following results:</strong><br />
+                <table id="html_table_result_summary">
+                    <thead><tr>
+                    <th>#</th>
+                    <th>Result UUID</th>
+                    <th>Model (version)</th>
+                    <th>Test (version)</th>
+                    <th>Score</th>
+                    </tr></thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>1</td>
+                                
+                                    <td><a href='#link_a19add16-5873-4b99-b043-5e020c7d6fb6'>a19add16-5873-4b99-b043-5e020c7d6fb6</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.305e2c36-45a2-4530-959c-515f4cc02861' target="_blank">CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354 (1.0)</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.e316f735-42d5-43f8-8729-6ac2e626353d' target="_blank">hippo_ca1_obl_int (1.0)</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=result.a19add16-5873-4b99-b043-5e020c7d6fb6' target="_blank">2.533</a></td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td>2</td>
+                                
+                                    <td><a href='#link_2379f8e3-758d-49ac-a29b-d9337ad3f5de'>2379f8e3-758d-49ac-a29b-d9337ad3f5de</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.38d57639-ad75-4e48-a235-1246f77c5d0b' target="_blank">CA1_int_bAC_971114B_20170511120711 (1.0)</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.582005aa-f6c7-4db5-85cb-895691a95269' target="_blank">somafeat_CA1_int_bAC (1.0)</a></td>
+                                    <td><a href='https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=result.2379f8e3-758d-49ac-a29b-d9337ad3f5de' target="_blank">171.406</a></td>
+                                
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </p>
+        </div>
+        <br />
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+            <br />
+            <h6 style="font-weight: bold;">1) <a name="link_a19add16-5873-4b99-b043-5e020c7d6fb6">Result UUID: a19add16-5873-4b99-b043-5e020c7d6fb6 </a></h6>
+            <br />
+            <div class="row">
+                <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#result_a19add16-5873-4b99-b043-5e020c7d6fb6">Result Info</a></li>
+                    <li class="tab col s3"><a href="#files_a19add16-5873-4b99-b043-5e020c7d6fb6">Result Files</a></li>
+                    <li class="tab col s3"><a href="#model_a19add16-5873-4b99-b043-5e020c7d6fb6">Model Info</a></li>
+                    <li class="tab col s3"><a href="#test_a19add16-5873-4b99-b043-5e020c7d6fb6">Test Info</a></li>
+                </ul>
+                </div>
+                <div id="result_a19add16-5873-4b99-b043-5e020c7d6fb6" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Result</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=result.a19add16-5873-4b99-b043-5e020c7d6fb6" target="_blank">a19add16-5873-4b99-b043-5e020c7d6fb6</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationresult/v0.1.0/a19add16-5873-4b99-b043-5e020c7d6fb6</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>score</td>               <td>2.5325422996633264</td></tr>
+                    <tr ><td>normalized_score</td>             <td>2.5325422996633264</td></tr>
+                    <tr ><td>passed</td>             <td>None</td></tr>
+                    <tr ><td>timestamp</td>             <td>2019-10-25T13:45:11.311755</td></tr>
+                    <tr ><td>project</td>             <td>8123</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_a19add16-5873-4b99-b043-5e020c7d6fb6" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="files_a19add16-5873-4b99-b043-5e020c7d6fb6" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Result Related Files</th></tr>
+                    
+                        <tr><td colspan=2></td></tr>
+                        
+                            <tr><td>File 1: </td><td>collab://8123/validation_results/2019-10-25/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354_20191025-134432</td></tr>
+                        
+                        <tr><td colspan=2></td></tr>
+                    
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_a19add16-5873-4b99-b043-5e020c7d6fb6" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="model_a19add16-5873-4b99-b043-5e020c7d6fb6" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Model</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.305e2c36-45a2-4530-959c-515f4cc02861" target="_blank">305e2c36-45a2-4530-959c-515f4cc02861</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/modelproject/v0.1.0/305e2c36-45a2-4530-959c-515f4cc02861</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>name</td>               <td>CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354</td></tr>
+                    <tr ><td>alias</td>             <td>None</td></tr>
+                    <tr><td>author</td>
+                        <td>
+                            
+                                Rosanna Migliore
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>owner</td>
+                        <td>
+                            
+                                Rosanna Migliore
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>organization</td>       <td>HBP-SP6</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>description</td>        <td><span> Single cell model optimized using BluePyOpt<br><br><strong>best\_cell</strong> : <em>cell\_seed3\_0.hoc</em><br><strong>best\_run</strong> : <em>seed3.pkl</em><br><strong>channels</strong> : <em>kdr, nax, kmb, kap, hd, can, cal, cat, kca, cagk, cacum, kad</em><br><strong>e-type</strong> : <em>cACpyr</em><br><strong>fitting\_name</strong> : <em>CA1\_PC\_cAC\_sig</em><br><strong>morphology</strong> : <em>oh140807\_A0\_idG</em></span></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>private</td>            <td>False</td></tr>
+                    <tr><td>collab_id</td>          <td>9821</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>species</td>            <td>Rattus norvegicus</td></tr>
+                    <tr><td>brain_region</td>       <td>hippocampus</td></tr>
+                    <tr><td>cell_type</td>          <td>pyramidal cell</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>model_scope</td>        <td>single cell</td></tr>
+                    <tr><td>abstraction_level</td>  <td>None</td></tr>                    
+                    <tr><td colspan=2></td></tr>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Model Instance</th></tr>
+                    <tr><td>id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.305e2c36-45a2-4530-959c-515f4cc02861" target="_blank">80ef9249-f92f-4295-98df-4b9526bff05a</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/memodel/v0.1.2/80ef9249-f92f-4295-98df-4b9526bff05a</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>version</td>               <td>1.0</td></tr>
+                    <tr ><td>source</td>             <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354.zip?bluenaas=true">https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354.zip?bluenaas=true</a></td></tr>
+                    <tr><td>license</td>       <td>None</td></tr>
+                    <tr><td>timestamp</td>       <td>2018-03-29T14:23:08.821703+00:00</td></tr>
+                    <tr><td>hash</td>       <td></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>description</td>        <td></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>code_format</td>            <td>asc, py, hoc, mod, json</td></tr>
+                    <tr><td>parameters</td>          <td>{"CA1_PC_cAC_sig": "oh140807_A0_idG.asc"}</td></tr>
+                    <tr><td>morphology</td>          <td style="word-break: break-all;">https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354/morphology/oh140807_A0_idG.asc</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_a19add16-5873-4b99-b043-5e020c7d6fb6" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="test_a19add16-5873-4b99-b043-5e020c7d6fb6" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Test</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.e316f735-42d5-43f8-8729-6ac2e626353d" target="_blank">e316f735-42d5-43f8-8729-6ac2e626353d</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationtestdefinition/v0.1.0/e316f735-42d5-43f8-8729-6ac2e626353d</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>name</td>               <td>Hippocampus_CA1_ObliqueIntegrationTest</td></tr>
+                    <tr ><td>alias</td>             <td>hippo_ca1_obl_int</td></tr>
+                    <tr><td>author</td>
+                        <td>
+                            
+                                Sara Saray
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>creation_date</td>       <td>2019-06-03T15:35:11.481605+00:00</td></tr>
+                    <tr><td>status</td>        <td><span> in development</span></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>species</td>            <td>Rattus norvegicus</td></tr>
+                    <tr><td>brain_region</td>       <td>hippocampus</td></tr>
+                    <tr><td>cell_type</td>          <td>pyramidal cell</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>data_location</td>        <td><a href='https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/sp6_validation_data/hippounit/oblique_target_data.json' target="_blank">https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/sp6_validation_data/hippounit/oblique_target_data.json</a></td></tr>
+                    <tr><td>data_type</td>  <td>Mean, SD</td></tr>
+                    <tr><td>data_modality</td>  <td>electrophysiology</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>test_type</td>  <td>single cell activity</td></tr>
+                    <tr><td>score_type</td>  <td>Other</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>protocol</td>  <td>Tests signal integration in oblique dendrites for increasing number of synchronous and asynchronous inputs.
+
+Features tested:
+- voltage threshold: the upper limit of the threshold for dendritic spike initiation (an expected somatic depolarization at wich step like dV/dt increase occur)
+- proximal threshold
+- distal threshold
+- degree of nonlinearity at threshold
+- suprathreshold degree of nonlinearity
+- peak derivative of (somatic voltage) at threshold
+- peak amplitude of somatic EPSP
+- time to peak of somatic EPSP
+- degree of nonlinearity in the case of asynchronous inputs</td></tr>
+                    <tr><td colspan=2></td></tr>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Test Instance</th></tr>
+                    <tr><td>id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.e316f735-42d5-43f8-8729-6ac2e626353d">2e5a1c27-ce72-46e7-9385-22262cfb85a6</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationscript/v0.1.0/2e5a1c27-ce72-46e7-9385-22262cfb85a6</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>version</td>               <td>1.0</td></tr>
+                    <tr ><td>repository</td>             <td><a href="https://github.com/KaliLab/hippounit.git"></a></td></tr>
+                    <tr><td>path</td>       <td>hippounit.tests.ObliqueIntegrationTest</td></tr>
+                    <tr><td>timestamp</td>       <td>2019-06-03T15:35:11.486321+00:00</td></tr>                    
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>parameters</td>        <td>None</td></tr>
+                    <tr><td>description</td>        <td></td></tr>                    
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_a19add16-5873-4b99-b043-5e020c7d6fb6" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="rainbow-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+            <br />
+            <h6 style="font-weight: bold;">2) <a name="link_2379f8e3-758d-49ac-a29b-d9337ad3f5de">Result UUID: 2379f8e3-758d-49ac-a29b-d9337ad3f5de </a></h6>
+            <br />
+            <div class="row">
+                <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#result_2379f8e3-758d-49ac-a29b-d9337ad3f5de">Result Info</a></li>
+                    <li class="tab col s3"><a href="#files_2379f8e3-758d-49ac-a29b-d9337ad3f5de">Result Files</a></li>
+                    <li class="tab col s3"><a href="#model_2379f8e3-758d-49ac-a29b-d9337ad3f5de">Model Info</a></li>
+                    <li class="tab col s3"><a href="#test_2379f8e3-758d-49ac-a29b-d9337ad3f5de">Test Info</a></li>
+                </ul>
+                </div>
+                <div id="result_2379f8e3-758d-49ac-a29b-d9337ad3f5de" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Result</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=result.2379f8e3-758d-49ac-a29b-d9337ad3f5de" target="_blank">2379f8e3-758d-49ac-a29b-d9337ad3f5de</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationresult/v0.1.0/2379f8e3-758d-49ac-a29b-d9337ad3f5de</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>score</td>               <td>171.406428936348</td></tr>
+                    <tr ><td>normalized_score</td>             <td>171.406428936348</td></tr>
+                    <tr ><td>passed</td>             <td>None</td></tr>
+                    <tr ><td>timestamp</td>             <td>2017-12-18T15:03:51.513834+00:00</td></tr>
+                    <tr ><td>project</td>             <td>None</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_2379f8e3-758d-49ac-a29b-d9337ad3f5de" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="files_2379f8e3-758d-49ac-a29b-d9337ad3f5de" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Result Related Files</th></tr>
+                    
+                        <tr><td colspan=2></td></tr>
+                        <tr><td colspan=2 style="text-align:center">No file associated with this result!</td></tr>
+                        <tr><td colspan=2></td></tr>
+                    
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_2379f8e3-758d-49ac-a29b-d9337ad3f5de" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="model_2379f8e3-758d-49ac-a29b-d9337ad3f5de" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Model</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.38d57639-ad75-4e48-a235-1246f77c5d0b" target="_blank">38d57639-ad75-4e48-a235-1246f77c5d0b</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/modelproject/v0.1.0/38d57639-ad75-4e48-a235-1246f77c5d0b</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>name</td>               <td>CA1_int_bAC_971114B_20170511120711</td></tr>
+                    <tr ><td>alias</td>             <td>None</td></tr>
+                    <tr><td>author</td>
+                        <td>
+                            
+                                Rosanna Migliore
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>owner</td>
+                        <td>
+                            
+                                Rosanna Migliore
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>organization</td>       <td>HBP-SP6</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>description</td>        <td><span> This model is being used to demonstrate use of the Validation Service</span></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>private</td>            <td>False</td></tr>
+                    <tr><td>collab_id</td>          <td>2270</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>species</td>            <td>Rattus norvegicus</td></tr>
+                    <tr><td>brain_region</td>       <td>hippocampus</td></tr>
+                    <tr><td>cell_type</td>          <td>pyramidal cell</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>model_scope</td>        <td>single cell</td></tr>
+                    <tr><td>abstraction_level</td>  <td>None</td></tr>                    
+                    <tr><td colspan=2></td></tr>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Model Instance</th></tr>
+                    <tr><td>id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/396589?state=model.38d57639-ad75-4e48-a235-1246f77c5d0b" target="_blank">8e90245a-2698-47d3-8532-fd8d0f764899</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/memodel/v0.1.2/8e90245a-2698-47d3-8532-fd8d0f764899</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>version</td>               <td>1.0</td></tr>
+                    <tr ><td>source</td>             <td><a href="https://github.com/lbologna/bsp_data_repository">https://github.com/lbologna/bsp_data_repository</a></td></tr>
+                    <tr><td>license</td>       <td>None</td></tr>
+                    <tr><td>timestamp</td>       <td>2017-12-18T15:03:40.251155+00:00</td></tr>
+                    <tr><td>hash</td>       <td></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>description</td>        <td></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>code_format</td>            <td></td></tr>
+                    <tr><td>parameters</td>          <td></td></tr>
+                    <tr><td>morphology</td>          <td style="word-break: break-all;">None</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_2379f8e3-758d-49ac-a29b-d9337ad3f5de" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+                <div id="test_2379f8e3-758d-49ac-a29b-d9337ad3f5de" class="col s12">
+                    <br />
+                    <table style="table-layout:fixed; width:100%; word-break: break-all;">
+                    <colgroup>
+                        <col style="width: 20%;"/>
+                        <col>
+                    </colgroup>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Test</th></tr>
+                    <tr><td style="width:20%;">id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.582005aa-f6c7-4db5-85cb-895691a95269" target="_blank">582005aa-f6c7-4db5-85cb-895691a95269</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationtestdefinition/v0.1.0/582005aa-f6c7-4db5-85cb-895691a95269</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>name</td>               <td>Somatic Features - CA1_int_bAC</td></tr>
+                    <tr ><td>alias</td>             <td>somafeat_CA1_int_bAC</td></tr>
+                    <tr><td>author</td>
+                        <td>
+                            
+                                Sara Saray
+                                
+                            
+                        </td>
+                    </tr>
+                    <tr><td>creation_date</td>       <td>2017-12-15T12:51:54.684499+00:00</td></tr>
+                    <tr><td>status</td>        <td><span> in development</span></td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>species</td>            <td>Rattus norvegicus</td></tr>
+                    <tr><td>brain_region</td>       <td>hippocampus</td></tr>
+                    <tr><td>cell_type</td>          <td>pyramidal cell</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>data_location</td>        <td><a href='collab://2270/test_observations/feat_CA1_int_bAC.json' target="_blank">collab://2270/test_observations/feat_CA1_int_bAC.json</a></td></tr>
+                    <tr><td>data_type</td>  <td>Mean, SD</td></tr>
+                    <tr><td>data_modality</td>  <td>electrophysiology</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>test_type</td>  <td>single cell activity</td></tr>
+                    <tr><td>score_type</td>  <td>Other</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>protocol</td>  <td>Tests somatic features under current injection of increasing amplitudes</td></tr>
+                    <tr><td colspan=2></td></tr>
+                    <tr class="card-panel orange lighten-4"><th style="text-align:center" colspan=2>Test Instance</th></tr>
+                    <tr><td>id</td>                 <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/409289?state=test.582005aa-f6c7-4db5-85cb-895691a95269">9f91cb91-2c24-42bd-8dfc-f86c1d69cafe</a></td></tr>
+                    <tr><td>uri</td>                <td>https://nexus.humanbrainproject.org/v0/data/modelvalidation/simulation/validationscript/v0.1.0/9f91cb91-2c24-42bd-8dfc-f86c1d69cafe</td></tr>
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>version</td>               <td>1.0</td></tr>
+                    <tr ><td>repository</td>             <td><a href="https://github.com/KaliLab/hippounit.git"></a></td></tr>
+                    <tr><td>path</td>       <td>hippounit.tests.SomaticFeaturesTest_Loader</td></tr>
+                    <tr><td>timestamp</td>       <td>2017-12-15T12:51:54.692176+00:00</td></tr>                    
+                    <tr class="brown lighten-5"><td colspan=2></td></tr>
+                    <tr><td>parameters</td>        <td>None</td></tr>
+                    <tr><td>description</td>        <td></td></tr>                    
+                    <tr class="brown lighten-5"><td colspan=2 style="text-align:right; padding-right: 50px;"><a href="#link_2379f8e3-758d-49ac-a29b-d9337ad3f5de" title="Go to top of this result"><i class="material-icons">open_in_browser</i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link_pagetop" title="Go to top of page"><i class="material-icons">vertical_align_top</i></a></td></tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="rainbow-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+
+        <br>
+        <br>
+    </body>
+
+</html>
